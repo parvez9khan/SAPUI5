@@ -92,7 +92,8 @@
 							<Table id="idProductsTable" inset="false" items="{pna>/}" noDataText="Stock not Available"> 
 								<!--<headerToolbar>-->
 								<columns>
-									<Column hAlign="Left" width="80px">
+									<Column hAlign="Left" width="80px" minScreenWidth="Phone"
+												demandPopin="true">
 										<Text text="WareHouse ID"/>
 									</Column>
 									<!--<Column minScreenWidth="Tablet" demandPopin="true">-->
