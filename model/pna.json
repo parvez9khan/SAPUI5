@@ -1,0 +1,40 @@
+
+	 [{
+		"wid": "BPNA",
+		"shpfrm": "US - Plainfield",
+		"price": "15.00",
+		"cur": "USD",
+		"avlq": "200",
+		"ordq": ""
+	},{
+		"wid": "IM-30",
+		"shpfrm": "Millington",
+		"price": "19.75",
+		"cur": "USD",
+		"avlq": "50",
+		"ordq": ""
+	},
+	{
+		"wid": "IM-40",
+		"shpfrm": "Carol Stream",
+		"price": "19.70",
+		"cur": "USD",
+		"avlq": "30",
+		"ordq": ""
+	},
+	{
+		"wid": "IM-84",
+		"shpfrm": "Netherlands Warehouse",
+		"price": "15.00",
+		"cur": "USD",
+		"avlq": "10",
+		"ordq": " "
+	},
+	{
+		"wid": "IM-91",
+		"shpfrm": "Lima Warehouse",
+		"price": "16.00",
+		"cur": "EUR",
+		"avlq": "20",
+		"ordq": ""
+	} ]

@@ -1,0 +1,42 @@
+{
+	"tile1": [{
+		"URL": "./image/lenovo_logo.jpg"
+	}, {
+		"URL": "./image/samsung_logo.jpg"
+	}, {
+		"URL": "./image/asus_logo.jpg"
+	}, {
+		"URL": "./image/dell_logo.jpg"
+	}],
+
+	"tile2": [{
+		"URL": "./image/dell_logo.jpg"
+	}, {
+		"URL": "./image/hp_logo.jpg"
+	}, {
+		"URL": "./image/intel_logo.jpg"
+	}, {
+		"URL": "./image/msi_logo.jpg"
+	}],
+	
+	"tile3": [{
+		"URL": "./image/acer.jpg"
+	}, {
+		"URL": "./image/alienware_logo.jpg"
+	}, {
+		"URL": "./image/intel.jpg"
+	}, {
+		"URL": "./image/microsoft.jpg"
+	}],
+		"tile": [{"URL":"http://blog.camerapro.com.au/wp-content/uploads/2015/02/EOS-5DSR_04_up_AUS-360x180.jpg"
+		},{
+		"URL": "http://blog.camerapro.com.au/wp-content/uploads/2014/06/Screen-Shot-2014-06-02-at-2.52.39-pm-360x180.png"
+	}, {
+		"URL": "http://paulsphoto.com/files/cameras-button-compact.jpg"
+	}, {
+		"URL": "http://www.cweb.com/thumbnail.php?file=9d0f66941c14107276c473d003af3af5.jpg&size=article_medium"
+	},{
+		"URL": "http://blog.camerapro.com.au/wp-content/uploads/2012/09/Canon-6D-360x180.png"
+	}
+	]
+}

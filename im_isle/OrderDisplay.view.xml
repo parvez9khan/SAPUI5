@@ -1,0 +1,207 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" xmlns="sap.m"
+		controllerName="im_isle.Home" xmlns:html="http://www.w3.org/1999/xhtml">
+<Page>
+	<headerContent>
+			<OverflowToolbar>
+				<Image
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAAAqFBMVEX///8hYK3///1fhbkYXKwgYazk6+68ydwAQptLd68BVp4HVqcsZKkbXqwiX64AU6masc61xNk5cLG6ydgAUpwASqEAT6L0+/oDV6zs8PQyaqwdW66jutMAR6CvwtLV3+hqia1df6h4k7WLobvK2OVSgLKMpcVfiLOPsM9LeKrm6/Z6lr5qjLqWs8pvmMJIdrMiXZrEzdJ6lK4AR5IAN4dCbaKBorh/psRj2h3lAAAEFklEQVRoge2WaXOjOBCGG1ngECEOOzZgiNnZCE8yEDuZ7Oz+/3+23RLY2MnEH1NT1U/50NH0q25dADAMwzAMwzAMwzAMwzAMwzAMcw2BH/FV0jl8ibSAh3+fv0IYoKn/25ZfISzyh+1zPqkL/DiOhUlJTAzFWStZwUXLxIFbUMcuKEshymYasoBwhrRGlP1soAZ4tYVgqtzNJnRZSbomHOtosR0rPfbBbnbqElCHT9nFyhZwo6WUyRwCOVCEIOaJlJVqjrFhYZdQpyZr/CY6w9aucI/odQCQJq5LJgYgjwZv1YEebyH/Nvg5JfvGQxQq+9qz6CiApcJCEriUoV3ZBNuEOuPYk9YqvsE0RbHn+1jxE8xTWtDD+C1SEI0cvMnQxvxyuzzfUh8p+8nSKpMDmxUzW93frxLf9UbRKh5czmkwJB3rzaBMTjSKzZUbhVUGETTQXFf2VEfK+jBYdGvp/HuomGCSg4Wm2h30FXb0OxX7HqbbKh9aibY5dMqLqTzE3Pab9HNl3cvYlxtSXtfO5NlmGedvLX2nDDXNRbwpfRyKqg0pY4Ks8oL6pAGcB/V40KPy93T3ecx+UZO8DFBZNtay3FCL0otu3mGI6zktLBxDnOwyGsC6zCMS2FjleGFw6KrO1+jTHE7znKbZxdI+KgunPA+ptlwWelPaQTYkHNUNngEG3VVdnfYorNULtDgSiXOyp9lYBVZ5k/uYtN4kPi7UxagsjFn+NuZROaVsdYaUreUPTLG+tYcGrFBBFkrihEePealssnFEimx2dWFDxxTH+rHyqxAWQ7YBnn4E368pG6U97eNvVA7ZxghXxh06tHp8Wmz+vnGzrftuv48pL4tHqkewo+mOPF/tjso4z13fic+Vs5wWmnpWnnLzjCeI9tALPU/5KFarirbR/TZ0G7uqcDz0b+sRZsBud5zmiTIYA1fmObOB6XZQo6DDRBYHe6Y0OJ60MT1J+DIeNrNNAmrZ3wjoeMGhYM4m2f4Whn9fyXY2bBlM38ZdLCLfzfqlPVNw9dCuynXsjRRr4lhFZXC5kC1MYg6C4OKCfLerMqBzjzYqBX18gxGu1EtUxvUiRyFZGyQ7HkKknNp0U8pOMYdt//DJfvascr6obN78WC3PLcV841ll2s+DUG67wlOD23y4z3FRLo5nWLbvzAcxax0XqKy1to77KtZUtqk9kW8Pq6EJJ0Rbqpl1gus5dg06ArpH0CNOMyrrUbnr398Y/9wib0sI7uh/i/fs6nbk5unVmYvXn7e2mQxg+Tb0v9XOnRkb7l7QZYue7lrs+EWFX2Tw8vTXw7uY35UuLCa/l0UYr9yze1dcFD5yAqdXmFPh4r3n5Pl3FnD2TnVWHByMbR/HxjAMwzAMwzAMwzAMwzAMwzB/BP8D8zpIUWDUE/kAAAAASUVORK5CYII="
+					press="homepage" class="mylogo"/>
+					<Image	src="./image/Hermes.png" class="myhermes"/>
+<!-- 					<Image	src="./image/SAPfiorilogo.jpg" class="myfiorilogo"/> -->
+<!-- 					<Label text="Hermes" level="12" class="myhermes"/> -->
+				<SearchField width="auto" placeholder="Search" id="__field01" class="mytoolbaritem"></SearchField>
+				<ToolbarSpacer/>
+				<MenuButton id="_menubtn1" text="Hello Mr.Smith" icon="sap-icon://customer" class="mytoolbaritem">
+					<menu>
+						<Menu itemSelected="onMenuAction">
+							<items>
+								<MenuItem text="My Orders" icon="sap-icon://my-sales-order"/>
+								<MenuItem text="My Address" icon="sap-icon://address-book"/>
+								<MenuItem text="Not Smith? Sign Out" icon="sap-icon://log"/>
+							</items>
+						</Menu>
+					</menu>
+				</MenuButton>
+				<Button id="_homecart1" text="Cart(4)" icon="sap-icon://cart" press="cart" class="mytoolbaritem"/>
+			</OverflowToolbar>
+		</headerContent>
+		<content>
+			<Panel>
+				<content>
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm id="SimpleFormChange480" minWidth="1024"
+							maxContainerCols="2" editable="true" layout="ResponsiveGridLayout"
+							labelSpanL="4" labelSpanM="4" emptySpanL="0" emptySpanM="0"
+							columnsL="2" columnsM="2"  class="editableForm">
+							<f:content>
+								<core:Title text="Order Details" />
+								<Label text="Order ID" />
+								<Input id="_order" value="7000002006" editable="false"/>
+<!-- 								<Input id="companyInput" -->
+<!-- 		value="{/company/name}" -->
+<!-- 		tooltip="The name of the company is '{/company/name}'}"/> -->
+<!-- 								<Input  value="{/Order}" editable="false"/> -->
+								<Label text="Invoice No." />
+								<Input value="9905222158" editable = "false"/>
+								<Link text="View Invoice" href="./image/OMT_1.pdf" target="_blank" emphasized="true" press="download">
+									<layoutData>
+										<l:GridData span="L5 M5 S4" />
+									</layoutData>
+								</Link>
+                    		   
+<!-- 								<html:a href="./image/OMT_1.pdf" download="Invoice">Download Invoice</html:a> -->
+								<Label text="Customer PO" />
+								<Input value="9000123987" editable="false"/>
+								<Label text="Currency" />
+								<Input value="US Dollar" editable="false"/>
+								<Label text="Price List" />
+								<Input value="" editable="false"/>
+								<Label text="Price Locked" />
+								<Select width="25%" >
+									<items >
+										<core:Item text="Yes" editable= "false"/>
+										<core:Item text="No" enabled = "false"/>
+									</items>
+								</Select>
+
+								<core:Title text="Ship to Address" />
+								<Label text="Name" />
+								<Input value="Amazon US" editable="false"/>
+								<Label text="Street/No." />
+								<Input value="Terry Ave" editable="false">
+								</Input>
+								<Input value="410" editable="false">
+									<layoutData>
+										<l:GridData span="L3 M3 S4" />
+									</layoutData>
+								</Input>
+								<Label text="ZIP Code/City" editable="false"/>
+								<Input value="588150" editable="false">
+									<layoutData>
+										<l:GridData span="L3 M3 S4" />
+									</layoutData>
+								</Input>
+								<Input value="New York" editable="false"/>
+								<Label text="Country" />
+								<Select width="30%">
+									<items >
+										<core:Item text="USA" editable = "false"/>
+										<core:Item text="Germany" enabled = "false"/>
+										<core:Item text="England" enabled = "false"/>
+									</items>
+								</Select>
+								<core:Title text="Sales Information" />
+								<Label text="Opportunity" />
+								<Input value="Sales" editable = "false"/>
+								<Label text="Quote" />
+								<Input value="Available" editable = "false"/>
+								<Label text="Potential Customer" />
+								<Input value="Yes" editable = "false"/>
+								<Label text="End User" />
+								<Input value="John K" editable = "false"/>
+								<core:Title text="ERP Information" />
+								<Label text="ERP Order ID" />
+								<Input value="9000123987" editable = "false"/>
+								
+								<Label text="Order Message" />
+								<Input value="Successful" editable = "false"/>
+								<Label text="Invoice System Date" />
+								<DatePicker id="DP1" placeholder="Enter Date ..." value="11/15/16" editable = "false"
+									change="handleChange" class="sapUiSmallMarginBottom" />
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+			</Panel>
+						<Panel headerText="Shopping Cart">
+				<content>
+					<Table id="idProductsTable" inset="false" items="{ordercart>/rootNode}">
+						<!-- <headerToolbar> -->
+						<!-- <Toolbar> -->
+						<!-- <ToolbarSpacer/> -->
+						<!-- <Button text="Remove" type="Reject"/> -->
+						<!-- </Toolbar> -->
+						<!-- </headerToolbar> -->
+						<columns>
+
+							<Column minScreenWidth="Desktop" demandPopin="true">
+								<Text text=" " />
+							</Column>
+							<Column width="250px">
+								<Text text="Product" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" width="70px">
+								<Text text="Properties" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Right"
+								width="50px">
+								<Text text="Unit" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true" hAlign="Center"
+								width="70px">
+								<Text text="Price/Unit" />
+							</Column>
+							<Column minScreenWidth="Phone" demandPopin="true"  hAlign="Center" width="70px">
+								<Text text="Quantity" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true"  hAlign="Center" width="70px">
+								<Text text="Discount" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true"  hAlign="Center" width="150px">
+								<Text text="Extended Amount" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true"  hAlign="Center" width="80px">
+								<Text text="Suggestions" />
+							</Column>
+							<Column minScreenWidth="Desktop" demandPopin="true"  hAlign="Center" >
+							<Text text="Status" />
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Image src="{ordercart>URL}" />
+									<ObjectIdentifier title="{ordercart>Name}" titleActive="true"
+										text="{ordercart>ProductId}"/>
+										<!-- <ObjectNumber -->
+										<!-- number="{cartitem>Price}" -->
+										<!-- unit="$" -->
+										<!-- state="Success" /> -->
+									<!--</ObjectIdentifier>-->
+
+									<Text text="{ordercart>Properties}" />
+									<Text text="{ordercart>Unit}" />
+									<Text text="${ordercart>Price}" />
+									<Text text="{ordercart>Quantity}" />
+									<Text text="{ordercart>Discount}" />
+
+									<Text text="{ordercart>ExtendedAmount}" />
+									<Text text="{ordercart>Suggestions}" />
+										<ObjectStatus class="sapUiSmallMarginBottom"
+											text="{ordercart>Delivery}"
+											state="{ordercart>DStatus}"/>
+<!-- 											"{=${ordercart>Price} > 300 ? 'Success':'Error' } -->
+<!-- 									<Button text="Remove" icon="sap-icon://decline" type="Reject" /> -->
+								</cells>
+							</ColumnListItem>
+							
+						</items>
+
+					</Table>
+				</content>
+			</Panel>
+		
+		</content>
+		<footer>
+			<Bar id="_footerBar">
+				<contentRight>
+					<!--<Button text="Add to Cart" icon="sap-icon://cart" type="Accept" press="addtocart"></Button>-->
+					<Label id="_total" text="Total:$932.00" design="Bold"/>
+					<Button icon="sap-icon://write-new" type="Accept" text="Write Review" press="writereview"></Button>
+					<Button icon="sap-icon://home" type="Emphasized" text="home" press="homepage"></Button>
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

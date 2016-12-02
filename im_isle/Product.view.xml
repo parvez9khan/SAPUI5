@@ -1,0 +1,280 @@
+<core:View  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified"
+	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+		controllerName="im_isle.Home" xmlns:html="http://www.w3.org/1999/xhtml">
+<Page showFooter="true" showHeader="true" navButtonPress="back">
+		<headerContent>
+			<OverflowToolbar>
+				<Image
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAAAqFBMVEX///8hYK3///1fhbkYXKwgYazk6+68ydwAQptLd68BVp4HVqcsZKkbXqwiX64AU6masc61xNk5cLG6ydgAUpwASqEAT6L0+/oDV6zs8PQyaqwdW66jutMAR6CvwtLV3+hqia1df6h4k7WLobvK2OVSgLKMpcVfiLOPsM9LeKrm6/Z6lr5qjLqWs8pvmMJIdrMiXZrEzdJ6lK4AR5IAN4dCbaKBorh/psRj2h3lAAAEFklEQVRoge2WaXOjOBCGG1ngECEOOzZgiNnZCE8yEDuZ7Oz+/3+23RLY2MnEH1NT1U/50NH0q25dADAMwzAMwzAMwzAMwzAMwzAMcw2BH/FV0jl8ibSAh3+fv0IYoKn/25ZfISzyh+1zPqkL/DiOhUlJTAzFWStZwUXLxIFbUMcuKEshymYasoBwhrRGlP1soAZ4tYVgqtzNJnRZSbomHOtosR0rPfbBbnbqElCHT9nFyhZwo6WUyRwCOVCEIOaJlJVqjrFhYZdQpyZr/CY6w9aucI/odQCQJq5LJgYgjwZv1YEebyH/Nvg5JfvGQxQq+9qz6CiApcJCEriUoV3ZBNuEOuPYk9YqvsE0RbHn+1jxE8xTWtDD+C1SEI0cvMnQxvxyuzzfUh8p+8nSKpMDmxUzW93frxLf9UbRKh5czmkwJB3rzaBMTjSKzZUbhVUGETTQXFf2VEfK+jBYdGvp/HuomGCSg4Wm2h30FXb0OxX7HqbbKh9aibY5dMqLqTzE3Pab9HNl3cvYlxtSXtfO5NlmGedvLX2nDDXNRbwpfRyKqg0pY4Ks8oL6pAGcB/V40KPy93T3ecx+UZO8DFBZNtay3FCL0otu3mGI6zktLBxDnOwyGsC6zCMS2FjleGFw6KrO1+jTHE7znKbZxdI+KgunPA+ptlwWelPaQTYkHNUNngEG3VVdnfYorNULtDgSiXOyp9lYBVZ5k/uYtN4kPi7UxagsjFn+NuZROaVsdYaUreUPTLG+tYcGrFBBFkrihEePealssnFEimx2dWFDxxTH+rHyqxAWQ7YBnn4E368pG6U97eNvVA7ZxghXxh06tHp8Wmz+vnGzrftuv48pL4tHqkewo+mOPF/tjso4z13fic+Vs5wWmnpWnnLzjCeI9tALPU/5KFarirbR/TZ0G7uqcDz0b+sRZsBud5zmiTIYA1fmObOB6XZQo6DDRBYHe6Y0OJ60MT1J+DIeNrNNAmrZ3wjoeMGhYM4m2f4Whn9fyXY2bBlM38ZdLCLfzfqlPVNw9dCuynXsjRRr4lhFZXC5kC1MYg6C4OKCfLerMqBzjzYqBX18gxGu1EtUxvUiRyFZGyQ7HkKknNp0U8pOMYdt//DJfvascr6obN78WC3PLcV841ll2s+DUG67wlOD23y4z3FRLo5nWLbvzAcxax0XqKy1to77KtZUtqk9kW8Pq6EJJ0Rbqpl1gus5dg06ArpH0CNOMyrrUbnr398Y/9wib0sI7uh/i/fs6nbk5unVmYvXn7e2mQxg+Tb0v9XOnRkb7l7QZYue7lrs+EWFX2Tw8vTXw7uY35UuLCa/l0UYr9yze1dcFD5yAqdXmFPh4r3n5Pl3FnD2TnVWHByMbR/HxjAMwzAMwzAMwzAMwzAMwzB/BP8D8zpIUWDUE/kAAAAASUVORK5CYII="
+					class="mylogo" press="homepage"/>
+					<Image	src="./image/Hermes.png" class="myhermes"/>
+<!-- 					<Image	src="./image/SAPfiorilogo.jpg" class="myfiorilogo"/> -->
+<!-- 						<Label text="Hermes" level="12" class="myhermes"/> -->
+				<SearchField width="auto" placeholder="Search" id="__field01" class="mytoolbaritem"></SearchField>
+				<ToolbarSpacer/>
+				<MenuButton id="_menubtn1" text="Hello Mr.Smith" icon="sap-icon://customer" class="mytoolbaritem">
+					<menu>
+						<Menu itemSelected="onMenuAction">
+							<items>
+								<MenuItem text="My Orders" icon="sap-icon://my-sales-order"/>
+								<MenuItem text="My Address" icon="sap-icon://address-book"/>
+								<MenuItem text="Not Smith? Sign Out" icon="sap-icon://log"/>
+							</items>
+						</Menu>
+					</menu>
+				</MenuButton>
+				<Button id="_homecart1" text="Cart(3)" icon="sap-icon://cart" press="cart" class="mytoolbaritem"/>
+			</OverflowToolbar>
+		</headerContent>
+		<content>
+			<Panel id="_panel001" width="100%" expanded="false">
+				<content>
+					<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" id="__layout01">
+						<HBox height="200px">
+							<!--<Panel width="350px" height="290px" expanded="true">-->
+							<!--	<content>-->
+<!-- 							<Carousel id="__carousel1" activePage="__image3" width="350px" height="100%"> -->
+<!-- 								<pages> -->
+<!-- 									<Image src="http://www.ingramacademy.com/prodpictures/37_20000003219_Front.jpg" id="__image3" height="100%" width="100%"/> -->
+<!-- 									<Image src="http://www.ingramacademy.com/prodpictures/37_20000003219_Rear.jpg" id="__image4" height="100%" width="100%"/> -->
+<!-- 								</pages> -->
+<!-- 							</Carousel> -->
+                              
+                               <SlideTile id="_stile3" tiles="{slidetiles>/tile}" class="sapUiTinyMarginTop" >
+		    					<tiles>
+									<GenericTile
+											backgroundImage="{slidetiles>URL}"
+											frameType="TwoByOne" press="pressOnTileOne"/>
+								</tiles>					
+		   					  </SlideTile>
+		   					  
+		   					  
+							<!--	</content>-->
+							<!--</Panel>-->
+							<!--<Panel width="100%" height="290px" expanded="true">-->
+							<!--	<content>-->
+							<sap.ui.layout:VerticalLayout xmlns:sap.ui.layout="sap.ui.layout" id="__layout0001" class="mylabelgap">
+								<Label text="Canon IXUS135BLBlue, DiG!C 4, 16.0MP" class="mytoolbaritem"/>
+								<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="3.5" enabled="false"/>
+								<Link press="onPress" text=" 4 Reviews" class="mylabelgap"/>
+								<HBox>
+									<Label text="$ 299" class="myamount"/>
+<!-- 									<Label width="5px"/> -->
+									<Label width="28px"/>
+									<Button text="Buy Now" icon="sap-icon://accept" type="Accept" press="checkout" class="mytoolbaritem"></Button>
+								</HBox>
+								<HBox>
+									<!--<Label text=" Pincode Check" labelFor="inp001"/>-->
+									<Input id="inp001" placeholder="Pincode Check" type="Number"/>
+									<Button text="Check" press="availabilitycheck"/>
+									<Text id="_txtavl" class="mypincheckbold"/>
+								</HBox>
+								
+								<!--<u:Currency value="2300.12" currency="USD" useSymbol="true"/>-->
+							</sap.ui.layout:VerticalLayout>
+							<!--		</content>-->
+							<!--	</Panel>-->
+<!--                                        <Label width="10rem"/>  -->
+<!-- 										<html:iframe id="video1" height="180px" width="400px" src="//www.youtube.com/embed/6pc3H3UqAGU?enablejsapi=1&amp;autoplay=1&amp;volume=0" frameborder="0" volume="0" allowfullscreen="true"/> -->
+<!-- 							            <html:iframe height="180px" width="400px" src='www.sap.com'/> -->
+<!-- 											<html:a href="./image/OMT_1.pdf" download="Invoice">Download</html:a>//to download a file to local system -->
+						</HBox>
+					</sap.ui.layout:VerticalLayout>
+				</content>
+			</Panel>
+
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" 
+			 tooltip="{i18n>detailIconTabBarAttachments}" text="Price and Availablity">
+						<content>
+							<Label text="" class="mylabelgap"/>
+							<Table id="idProductsTable" inset="false" items="{pna>/}" noDataText="Stock not Available"> 
+								<!--<headerToolbar>-->
+								<columns>
+									<Column hAlign="Left" width="80px">
+										<Text text="WareHouse ID"/>
+									</Column>
+									<!--<Column minScreenWidth="Tablet" demandPopin="true">-->
+									<!--	<Text text="Shipping From"/>-->
+									<!--</Column>-->
+									<Column hAlign="Right" minScreenWidth="Tablet"
+												demandPopin="true" vAlign="Middle">
+										<Text text="Price"/>
+									</Column>
+									<!--<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">-->
+									<!--	<Text text="Stock Qty"/>-->
+									<!--</Column>-->
+									<Column hAlign="Center"  vAlign="Middle">
+										<Text text="Available Qty"/>
+									</Column>
+									<Column  hAlign="Center" >
+										<Text text="Order Qty"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem>
+										<cells>
+											<ObjectIdentifier title="{pna>wid}" text="{pna>shpfrm}"/>
+											<!--<Text text="{pna>SupplierName}"/>-->
+											<!--<Text text="{pna>Width} x {pna>Depth} x {pna>Height} {pna>DimUnit}"/>-->
+											<ObjectNumber number="{pna>price}" unit="{pna>cur}"/>
+											
+											<ObjectNumber number="{pna>avlq}" unit="EA" state="Success"/>
+											<Input value="{pna>ordq}" type="Number" width="100px"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter2" tooltip="{i18n>detailIconTabBarAttachments}" text="Product Description">
+						<content>
+							<!--<core:Fragment fragmentName="open.sap.view.RiskSummary" type="XML"/>-->
+							<!--<TextArea editable ="false"-->
+							<!--	value="Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat. Lorem ipsum dolor st amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat."-->
+							<!--	growing="true" width="100%"/>-->
+							<Label text="Entry-Level Camera with Easy Functions" class="mytoolbaritem"/>
+							<MessageStrip
+								text="Look good on both sides of the camera with the slim and stylish IXUS 135. 8x Zoom and Intelligent Image Stabilisation coupled with Wi-Fi means you can share beautiful photos on the run."
+								showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+							<Label text="Professional Quality Videos" class="mytoolbaritem"/>
+							<MessageStrip
+								text="The Canon EOS 700D has the ability to shoot rich 1080p videos at 30 frames per second to capture your precious moments in full high definition glory. In addition to this, the hybrid CMOS auto-focus system in conjunction with the touch screen lets you shoot professional quality videos with smooth focusing of subjects. Thanks to the wide selection of lenses available, you can use a fast aperture lens with the 700D and achieve cinematic video effects with a shallow depth of field."
+								showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+							<Label text="Flawless Image Quality even in Low Light Conditions" class="mytoolbaritem"/>
+							<MessageStrip
+								text="Featuring an 18 megapixel sensor and powered by a 14-bit DIGIC 5 image processor, the Canon EOS 700D produces highly detailed images with wide dynamic range and accurate colour reproduction. With an ISO range from 100 to 12,800, you can capture high quality images with minimal noise even in low light conditions. The ability to shoot photographs at 5 frames per second along with the advanced 9-point all cross-type auto-focus system allows you to shoot fast moving objects with perfect focus in all conditions."
+								showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+							<Label text="Loaded with Other Features for Perfect Photography" class="mytoolbaritem"/>
+							<MessageStrip
+								text="The Canon EOS 700D sports a 3-inch 1,040,000 dot LCD display with a swivelling action and full touchscreen capability for composing images in the most awkward of angles with ease. Using the touchscreen, you can select individual focus points in the Live-view mode. To get the most out of your photography, the 700D has seven different creative filters that can enhance the look of any specific scenery."
+								showIcon="true" showCloseButton="false" class="sapUiMediumMarginBottom"></MessageStrip>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter id="iconTabBarFilter4" tooltip="{i18n>detailIconTabBarAttachments}" text="Details">
+						<content>
+							<VBox class="sapUiSmallMargin">
+								<f:SimpleForm id="SimpleFormDisplay354" minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+									title="Technical Details" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+									<f:content>
+										<Label text="Brand" class="mybold"/>
+										<Text text="Canon"/>
+										<Label text="Model" class="mybold"/>
+										<Text text="EOS 700D"/>
+										<Label text="Item Weight" class="mybold"/>
+										<Text text="544 g"/>
+										<Label text="Product Dimensions" class="mybold"/>
+										<Text text="13.2 x 9.9 x 7.9 cm"/>
+										<Label text="Item model number" class="mybold"/>
+										<Text text="EOS 700D"/>
+										<Label text="Additional Features" class="mybold"/>
+										<Text text="18 Megapixel Camera, CMOS Image Sensor, 3 inch TFT Colour LCD Screen, Full HD Recording"/>
+										<Label text="Included Components" class="mybold"/>
+										<Text
+											text="Canon EOS 700D Camera, Canon EF-S 18-55mm f/3.5-5.6 IS II Lens, Canon EF-S 55-250mm f/4-5.6 IS II Lens, Canon Battery LP-E8, Canon Battery Charger LC-E8E, Wide Strap, USB Cable, Software CD, Manual, 2 Year Canon India Warranty Card, 8GB SDHC Class 10 - in the box and Camera Bag (packed separately)"/>
+										<Label text="Screen Size" class="mybold"/>
+										<Text text="3 Inches"/>
+										<Label text="Display Type" class="mybold"/>
+										<Text text="LCD"/>
+										<Label text="Image Stabilization" class="mybold"/>
+										<Text text="1484872031"/>
+										<Label text="Optical Zoom" class="mybold"/>
+										<Text text="3 X"/>
+										<Label text="Display Resolution Maximum" class="mybold"/>
+										<Text text="1080p Full HD"/>
+										<Label text="Optical Sensor Resolution" class="mybold"/>
+										<Text text="18 Megapixels"/>
+										<Label text="Max Shutter Speed" class="mybold"/>
+										<Text text="1/200 Seconds"/>
+										<Label text="Min Shutter Speed" class="mybold"/>
+										<Text text="30 seconds"/>
+										<Label text="Video Capture Resolution" class="mybold"/>
+										<Text text="1920 x 1080"/>
+										<Label text="Batteries Included" class="mybold"/>
+										<Text text="Yes"/>
+										<Label text="Continuous Shooting Speed" class="mybold"/>
+										<Text text="5"/>
+										<Label text="Viewfinder Type" class="mybold"/>
+										<Text text="Optical"/>
+									</f:content>
+								</f:SimpleForm>
+								<f:SimpleForm id="SimpleFormDisplay3541" minWidth="1024" maxContainerCols="2" editable="false" layout="ResponsiveGridLayout"
+									title="Additional Information" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1" columnsM="1">
+									<f:content>
+										<Label text="ASIN" class="mybold"/>
+										<Text text="B00VT61IKA"/>
+										<Label text="Customer Reviews" class="mybold"/>
+										<Text text="3.5 out of 5 stars See all reviews "/>
+										<Label text="Total Review" class="mybold"/>
+										<Text text="4 reviews"/>
+										<Label text="Average rating" class="mybold"/>
+										<Text text="3.5 out of 5 stars"/>
+										<Label text="Best Sellers Rank" class="mybold"/>
+										<Text text="294 in Electronics (See top 100)"/>
+										<Label text="Rank" class="mybold"/>
+										<!--<Text text="#1 in Electronics > Cameras & Photography > Digital Cameras > Digital SLRs"/>-->
+										<!--<Label text="Date First Available" class="mybold"/>-->
+										<Text text="42102"/>
+									</f:content>
+								</f:SimpleForm>
+							</VBox>
+						</content>
+					</IconTabFilter>
+					<IconTabFilter text="Reviews">
+						<content>
+							<!--<Panel class="sapUiResponsiveMargin" width="auto" headerText="Technical Details" expandable="{device>/system/phone}" expanded="true">-->
+							<!--<content>-->
+							<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="4.5" enabled="false"/>
+							<HBox>
+								<Label text="By Thomas. P :"/>
+								<Label width="3px"/>
+								<Label text="Superb service by Ingram Micro, Go for it guys....." class="mybold"/>
+							</HBox>
+							<Text
+								text="I have ordered this product as all of friends has recommended. It was delivered from the seller sunriser. when I received the product , I saw the packet seal was broken(some tapes were there). So, I cross checked the all the products and features. All the products were new and in good condition. But here is the catch, the manual focus was not working properly. So, I complained to Amazon and they have replaced the product with a new one from the same seller."/>
+							<HBox>
+								<Label text=""/></HBox>
+							<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="4" enabled="false"/>
+							<HBox>
+								<Label text="By James. B :"/>
+								<Label width="3px"/>
+								<Label text="Quality is pretty good. The only thing I didn't like was ..." class="mybold"/>
+							</HBox>
+							<Text
+								text="Quality is pretty good. The only thing I didn't like was pixels add compared to 24 mp.. It makes a difference.. Rest all other Farris are better then any other camera in this range."/>
+							<HBox>
+								<Label text=""/></HBox>
+							<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="4" enabled="false"/>
+							<HBox>
+								<Label text="By Nair. R :"/>
+								<Label width="3px"/>
+								<Label text="Great thing to start your professional journey...." class="mybold"/>
+							</HBox>
+							<Text text="Amazing device within range of pocket.ISO ,shutter speed is as expected.great thing to start ur professional journey"/>
+							<HBox>
+								<Label text=""/></HBox>
+							<RatingIndicator maxValue="5" class="sapUiSmallMarginBottom" value="5" enabled="false"/>
+							<HBox>
+								<Label text="By Will. S :"/>
+								<Label width="3px"/>
+								<Label text="Perfect" class="mybold"/>
+							</HBox>
+							<Text text="Excellent Camera, Thanks to Ingram Micro for such a great service"/>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+			
+		</content>
+		<footer>
+			<Bar id="_footerBar">
+				<contentRight>
+					<Button text="Add to Cart" icon="sap-icon://cart" type="Accept" press="addtocart"></Button>
+					<Button icon="sap-icon://cart-approval" type="Emphasized" text="Checkout" press="checkout"></Button>
+<!-- 					<Button icon="sap-icon://cancel" type="Reject" text="Cancel" press="homepage"></Button> -->
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

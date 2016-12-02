@@ -1,0 +1,74 @@
+/* Enter your custom styles here */
+.break-word {
+  /*word-wrap: break-word;*/
+  /*text-overflow: ellipsi;*/
+  /*    color: aqua;*/
+}
+.tilemargin{
+	margin-left:30px;
+}
+.stilemargin{
+	margin-left:60px;
+}
+.sapMGT.OneByOne { /*To make tile cont in center for below price text*/
+    /*width: 11rem;*/
+    /*height: 11rem;*/
+    margin-left: 20px;
+}
+.mylink{ /*To give sapce betwwen links before & after '|'*/
+	margin-left:21px;
+	margin-right:21px;
+}
+.mytoolbaritem{
+	margin-top:2px;
+	font-weight: bold;
+}
+#page3--_total{
+font-size: x-large;
+}
+.myamount{
+	font-weight: bold;
+	font-size: -webkit-xxx-large;
+}
+.mybold{
+	font-weight: bold;
+	
+}
+.myhermes{
+    height: 20px;
+    margin-left: -12px;
+    margin-top: 3px;
+    
+}
+.mypincheckbold{
+    font-weight: bold;
+    margin-top: 13px;
+    margin-left: 5px;
+}    
+#__button0,#__button2,#__button1,#__button7,#__button10,#__button6{
+	font-weight: bold;
+}
+#__panel0{
+	height : 324px;
+}
+.mylabelgap{
+	margin-left:5px;
+	/*width: 110px;*/
+ /*   height: 42px;*/
+}
+.myfiorilogo{
+	    height: 30px;
+    margin-top: 5px;
+}
+.mycolumn{
+	
+}
+.mycenter{
+	display: flex;
+    align-items: center;
+    justify-content: center;	
+}
+.mybackimage{
+	    background-repeat: no-repeat;
+    	background-position: center center;
+}

@@ -1,0 +1,47 @@
+{
+	"rootnode": [{
+		"URL": "./image/canon_cam.jpg",
+		"ProductId": "A300_ZA1861",
+		"Name": "Canon IXUS135BLBlue, DiG!C 4, 16.0MP",
+		"Properties": "NB-11L",
+		"Unit": "EA",
+		"Price": "$299.00",
+		"Quantity": "1",
+		"Discount": "10%",
+		"ExtendedAmount": "$269.10",
+		"Suggestions": "N.A"
+	}, {
+		"URL": "https://images-eu.ssl-images-amazon.com/images/I/51jBNPgWISL._SS100_.jpg",
+		"ProductId": "A997_23456",
+		"Name": "Apple iPhone 6, Space grey, 16 GB",
+		"Properties": "128 GB",
+		"Unit": "EA",
+		"Price": "$998.00",
+		"Quantity": "2",
+		"Discount": "5%",
+		"ExtendedAmount": "$948.10",
+		"Suggestions": "N.A"
+	}, {
+		"URL": "https://images-eu.ssl-images-amazon.com/images/I/41KNvJhpjoL._SS100_.jpg",
+		"ProductId": "2270",
+		"Name": "Philips SHE1350 In-Ear Headphones, Black",
+		"Properties": "IN-EAR",
+		"Unit": "EA",
+		"Price": "$10.00",
+		"Quantity": "4",
+		"Discount": "20%",
+		"ExtendedAmount": "$32.00",
+		"Suggestions": "N.A"
+	}, {
+		"URL": "https://images-eu.ssl-images-amazon.com/images/I/51eiNbfYJ8L._SS100_.jpg",
+		"ProductId": "2280",
+		"Name": "MSi Radeon RX 460 2GB DDR5 OC Edition Display Port/HDMI/DL-DVI-D",
+		"Properties": "RADEON RX 460 2G OC",
+		"Unit": "EA",
+		"Price": "$124.00",
+		"Quantity": "1",
+		"Discount": "10%",
+		"ExtendedAmount": "$111.60",
+		"Suggestions": "N.A"
+	}]
+}

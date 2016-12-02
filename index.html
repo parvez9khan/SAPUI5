@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+        <title>Ingram Micro</title>
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.core"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-compatVersion="edge">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+		var _timeout;
+		var qnt;
+		var carousel_auto = 0;
+		sap.ui.localResources("im_isle");
+        var oCartCurrent = new sap.ui.model.json.JSONModel("./model/currentcart.json");		//Current Cart
+		sap.ui.getCore().setModel(oCartCurrent, "currentcart");		
+		var oCartOrder = new sap.ui.model.json.JSONModel("./model/ordercart.json");		//Respective Order Cart
+		sap.ui.getCore().setModel(oCartOrder, "ordercart");
+		var oMyOrder = new sap.ui.model.json.JSONModel("./model/myorder.json");		//My Orders
+		sap.ui.getCore().setModel(oMyOrder, "myorder");
+		var oPnA = new sap.ui.model.json.JSONModel("./model/pna.json");
+		sap.ui.getCore().setModel(oPnA, "pna");
+		var oSlideTiles = new sap.ui.model.json.JSONModel("./model/slidetile.json");
+		sap.ui.getCore().setModel(oSlideTiles, "slidetiles");
+        </script>
+
+		<script>
+		<!--         jQuery Router -->
+		jQuery.sap.require("sap.ui.core.routing.Router");
+		jQuery.sap.require("sap.ui.core.routing.HashChanger");
+				sap.ui.localResources("im_isle");
+				var app = new sap.m.App({initialPage:"page1"});
+				var page1 = sap.ui.view({id:"page1", viewName:"im_isle.Home", type:sap.ui.core.mvc.ViewType.XML});
+				var page2 = sap.ui.view({id:"page2", viewName:"im_isle.Product", type:sap.ui.core.mvc.ViewType.XML});
+				var page3 = sap.ui.view({id:"page3", viewName:"im_isle.Checkout", type:sap.ui.core.mvc.ViewType.XML});
+				var page4 = sap.ui.view({id:"page4", viewName:"im_isle.OrderDisplay", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page1);
+				app.addPage(page2);
+				app.addPage(page3);
+				app.addPage(page4);
+				app.placeAt("content");
+				//Router
+				var router = new sap.ui.core.routing.Router([
+					{
+						pattern: "",
+						name:"Home",
+						view:"opensap.com.view.Home",
+						viewType: sap.ui.core.mvc.ViewType.XML,
+						targetControl:"app",//Id of Sap.m.App control
+// 						targetAggregation:"pages",//Content/Page
+						clearTarget:false,//false
+						callback:function(){
+							// app.setInitialPage(page1);
+							app.to(page1);
+						}
+					},
+					{
+						pattern: ["Prod","Product"],
+						name:"Product",
+						view:"opensap.com.view.Product",
+						viewType: sap.ui.core.mvc.ViewType.XML,
+						targetControl:"app",//Id of Sap.m.App control i.e Parent control
+// 						targetAggregation:"pages",//Content/Page
+						clearTarget:false,//false
+						callback:function(){
+							// app.setInitialPage(page2);
+							app.to(page2);
+						}
+					},
+					{
+						pattern: ["Check","Checkout"],
+						name:"Checkout",
+						view:"opensap.com.view.Checkout",
+						viewType: sap.ui.core.mvc.ViewType.XML,
+						targetControl:"app",//Id of Sap.m.App control i.e Parent control
+// 						targetAggregation:"pages",//Content/Page
+						clearTarget:false,//false
+						callback:function(){
+							// app.setInitialPage(page2);
+							app.to(page3);
+						}
+					},
+					{
+						pattern: ["Order","OrderDisplay"],
+						name:"OrderDisplay",
+						view:"opensap.com.view.OrderDisplay",
+						viewType: sap.ui.core.mvc.ViewType.XML,
+						targetControl:"app",//Id of Sap.m.App control i.e Parent control
+// 						targetAggregation:"pages",//Content/Page
+						clearTarget:false,//false
+						callback:function(){
+							// app.setInitialPage(page2);
+							app.to(page4);
+						}
+					}
+					
+					]);
+				    router.register("appRouter");
+				    router.initialize();
+				
+		</script>
+		<script src="connectivity/connectivity.js" type="text/javascript"></script> 
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
