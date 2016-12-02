@@ -712,7 +712,7 @@ sap.ui.define([
 			HashChanger.setHash("Check");
 			sap.ui.getCore().getModel("currentcart").setData(oCartCurrent, true);
 			 qnt = sap.ui.getCore().byId("__input0-page2--idProductsTable-0").getValue();//Hardcode
-			 sap.ui.getCore().byId("__text54-page3--idProductsTable-0").setText(qnt);//Hardcode
+			 sap.ui.getCore().byId("__text56-page3--idProductsTable-0").setText(qnt);//Hardcode
 			 
 //			app.to(page3);
 		}
