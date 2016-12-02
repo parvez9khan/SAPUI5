@@ -632,6 +632,30 @@ sap.ui.define([
 					dialog.open();					
 				},
 			error:function(data){
+				console.log("Error in creating order");
+				var dialog = new sap.m.Dialog({
+					title: 'Thank You for Shopping at Ingram Micro',
+					type: 'Message',
+					state: 'Success',
+					content: new sap.m.Text({
+						text: "Your order 7000098685 has been placed successfully ",
+						textAlign: "Center"
+					}),
+					beginButton: new sap.m.Button({
+						text: 'OK',
+						press: function() {
+							dialog.close();
+							var HashChanger = new sap.ui.core.routing.HashChanger();
+							HashChanger.setHash("");
+//							app.to(page1);
+						}
+					}),
+					afterClose: function() {
+						dialog.destroy();
+					
+					}
+				});
+				dialog.open();
 
 //				alert("Problem in creating order");
 			}	
