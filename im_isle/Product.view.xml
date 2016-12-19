@@ -1,5 +1,6 @@
 <core:View  xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified"
 	xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:viz="sap.viz.ui5.controls" xmlns:viz.data="sap.viz.ui5.data" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
 		controllerName="im_isle.Home" xmlns:html="http://www.w3.org/1999/xhtml">
 <Page showFooter="true" showHeader="true" navButtonPress="back">
 		<headerContent>
@@ -88,6 +89,25 @@
 					<IconTabFilter id="iconTabBarFilter1" 
 			 tooltip="{i18n>detailIconTabBarAttachments}" text="Price and Availablity">
 						<content>
+					        <HBox>	
+							<viz:VizFrame id="oVizFrame" busy="false" busyIndicatorDelay="1000" visible="true" vizType="pie" legendVisible="true">
+						<viz:dataset>
+							<viz.data:FlattenedDataset data="{pna>/}">
+								<viz.data:dimensions>
+									<viz.data:DimensionDefinition name="Warehouse" value="{pna>wid}"/>
+								</viz.data:dimensions>
+								<viz.data:measures>
+									<viz.data:MeasureDefinition group="1" name="Available Qty" value="{pna>avlq}"/>
+								</viz.data:measures>
+							</viz.data:FlattenedDataset>
+						</viz:dataset>
+						<!-- sap.viz.ui5.data.Dataset -->
+						<viz:feeds>
+							<viz.feeds:FeedItem id="value1" uid="size" type="Measure" values="Available Qty"/>
+							<viz.feeds:FeedItem uid="color" type="Dimension" values="Warehouse"/>
+							
+						</viz:feeds>
+					  </viz:VizFrame>
 							<Label text="" class="mylabelgap"/>
 							<Table id="idProductsTable" inset="false" items="{pna>/}" noDataText="Stock not Available"> 
 								<!--<headerToolbar>-->
@@ -109,7 +129,7 @@
 									<Column hAlign="Center"  vAlign="Middle">
 										<Text text="Available Qty"/>
 									</Column>
-									<Column  hAlign="Center" >
+									<Column  hAlign="Center" vAlign="Middle" >
 										<Text text="Order Qty"/>
 									</Column>
 								</columns>
@@ -127,6 +147,7 @@
 									</ColumnListItem>
 								</items>
 							</Table>
+					  </HBox>		
 						</content>
 					</IconTabFilter>
 					<IconTabFilter id="iconTabBarFilter2" tooltip="{i18n>detailIconTabBarAttachments}" text="Product Description">
