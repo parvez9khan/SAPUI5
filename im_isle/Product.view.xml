@@ -66,7 +66,7 @@
 								</HBox>
 								<HBox>
 									<!--<Label text=" Pincode Check" labelFor="inp001"/>-->
-									<Input id="inp001" placeholder="Pincode Check" type="Number"/>
+									<Input id="inp001" placeholder="Pincode Check" type="Number" submit="availabilitycheck"/>
 									<Button text="Check" press="availabilitycheck"/>
 									<Text id="_txtavl" class="mypincheckbold"/>
 								</HBox>
