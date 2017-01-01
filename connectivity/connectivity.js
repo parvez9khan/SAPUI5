@@ -38,7 +38,7 @@ if (host == "uschlmdg4001v.corporate.ingrammicro.com") {
 	var authUrl="http://uschamdg1001d.corporate.ingrammicro.com:8000/sap/opu/odata/sap/ZGW_PURREQ_USER_AUTH_SRV/";
 	var approvalUrl="http://uschamdg1001d.corporate.ingrammicro.com:8000/sap/opu/odata/SAP/ZGM_GETWORKLIST_SR_SRV/";
 
-} else if (host == "localhost"){
+} else {
 	// hitting to Development for localhost
 	var User="INRANS10";
 	var Password="anish12345";
