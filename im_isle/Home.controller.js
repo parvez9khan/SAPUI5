@@ -60,7 +60,7 @@ sap.ui.define([
 	onAfterRendering: function() {
 //		$("#__button0").hide();
 		debugger;
-		login = 1;
+		var login = 1;
        if(this.getView().sId == "page1" & login == 0){
 		var dialog = new sap.m.Dialog({
 			title: 'Login',
