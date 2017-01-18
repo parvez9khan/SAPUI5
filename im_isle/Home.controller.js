@@ -97,6 +97,10 @@ sap.ui.define([
 		dialog.open();
        } else{ login = 1}
 	
+       var carousel = sap.ui.getCore().byId('page1--__carousel1');
+       if(carousel){
+		carousel_auto = setTimeout(function() { carousel.next();}, 3500);
+       }
 //		var carousel = sap.ui.getCore().byId('page1--__carousel1');
 //		if(carousel!=undefined){
 //		carousel.next();
