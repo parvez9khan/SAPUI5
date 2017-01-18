@@ -60,43 +60,7 @@ sap.ui.define([
 	onAfterRendering: function() {
 //		$("#__button0").hide();
 		debugger;
-		var login = 1;
-       if(this.getView().sId == "page1" & login == 0){
-		var dialog = new sap.m.Dialog({
-			title: 'Login',
-			type: 'Message',
-			contentWidth: "400px",
-			contentHeight: "220px",
-			content: [
-			    new sap.m.Image({src:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAABACAMAAABcOV4sAAAAqFBMVEX///8Ad7QAcbEAdLLv9vpCl8Wnx98AdbPy+fwAbK9tpcwAb7CkzOIBe7YNfbf7/v6TvdnR6PM1kcJlrNCCu9kjjcHb7fbG3exQoswAaq6+3e1Yncnh8ffM4u50stQ4iL2yzuNJkcGWx+BpospjqM8ag7vW6/Ssz+S81ecqg7ojjsGYwdx9rdCGtNSuy+FHkMEAYqqPwt202Orn7fRjmsaStdRHncnC4e9OwzADAAALm0lEQVR4nO2be3eivBaHIcEGRESpiBfw0orFUWemet72+3+zA8gleycEtO85s2at/v6YNQUSkodk752dqGnfekiucb0af7oRf7HCs+/7vcT90+34WxUuP4L99Kd//Cb4mM7+dftrPUic659uyd+pQDeucWiy8J/Zn27K36mEXK/D0Whp/DP80035O5UBXM9sQ/sG+Jgix7h64WGgnb6n8GM6x9ddOP7P5duJPKjwtReMo9Hw6TuMeVDGyI/j5Xcg/bi+l3IPyDSmY4Hak6A3M7/hJuKtSlFZ3DjCG0ezS0uMjaLuQj+TIBiHkjliNhee1k8turQ+62ageHAKXrzvx4zovQHsIrUJlO3fGJuvFmmStSsrGf+Gd36HXQCq6q7EnNhfngZjXHjh4CZXTT/XT83mza1f8t+y19gUmxz590a+nYrYtA+a4+hIzCsA9im+VT8TlwN5bME7VieA2lFnjZXXb9EZpc5heYFlR43tott6yDyT5nrX3DS8CgDq55wBT/qVsNXg7b1HrAXfnKFQrANA3Qq+BvDz0Fw3ag6j8w9+zoW9xnYxlnQBqA+5T5JYjY9BgEFMb9NuRHZfB0hWXwNo/uowAuu3DbmeJE5zUXKq7JNqBOrc1FwpnoMAh/HtPwP2LwBk/tcAajvFAJF1ZVIWdM+KkrVpUY5Aeqp9k9/8OSDAsUcGqU8zFkt7wl1+EKBumXKA844AB7aiconIW1HQUPRY1+1qcioBLutWNs9gBFA72fp621sP6W8QyQgAaSeA9qABIPT8SK5pFNLuBMiGhR1U2Kys8T+6ANTj0oRrC0U7EEB35ZDUC+sH4EMeBUiepQDt10Z45j54Ou96np/K6+1UGGQqp92HqlXpzChHhxIg2ZStmqgMAgSoaW/n19fTAM2xBwHSX64EIFk2rW7CY98bEkIpy0SpGoOsN+t8CLpE7X3IeyeA59LZLFWGHgPM1iJCZP8gQHaIRIA0jnD1NxmrtdOBWRHAUikj8jMfBGjKYZ502wAQvJ32ig8drrnyDNUlALxccu4h6OWjAItQgAfI9DdNJnNFCW6cTPFklel5eZCF2eTZFEcMmWCfMlxIAdJZzLeeFXm8C9d95vdgXQjgPrYsPTKjnaUOY7oBLG0SD5Aupdmdcc/uFPRRrywRnYdiCfqRtmt8ADcYM3eolWwkBUhewIN28amP/CMrZBAhQLdPqEPiHbMtdRjTFeBt2cQDtKQTOFh3tHes8qCa+yYSzNt1RNc+zAvyymWIggEOnvjJX/hA98S1zU5WKoDTrXVMtpTYcR9EGp0BOj5cNd5CAQ4g9TWJpsOu/oLx5cVAO7NbuE32k3ZFHWBOIANovyT8BXZbVUz5ZaFloNGMAmnfydbh/ksIszHdAa7WYFSkjYcA7UAT5bLO/hYAxPFlNrSMdD0Kr6VOy8RrMfvsykbgZBzzzZ/nneTrY775oQS4TqEf7U/cw84AydMz9GR5SqvuKPNlIcy5e8AMABoCQLIytSdYW8ZU22AjeGuHANAA/ue2ZOHLkh2OMfFSbhgEfTIJkuSxKWwnF9D827qzBph1UND+0Og/GCXI5PAAQxHgT81AiZjcYYzX6BW3mSAA1Hh7d8uGmPy6mjxpuHo0hbO72bvsFd/F7gA37hxeiCDAjWQAHqX80kiaWMSbJODlACCO99LvFWlTNFvzkMXso6tkJgf4wgdHebzIf5DMdioBRvHcSpX+M38Q4BElX/OPWAOMJSbQeBUtYJ4k3a4WqaWCRocH6G5xwSxswrHdNrd2A5zfmrtSgBGfg2SHsaZdOaS0N1UDdKfTaRiG03C6B1Otuw0caTNwJQ87KoDM24sA9x4KTRmh8fI8GN8CRnfE97JOBGhhH4/cvMMoeVwkJQUzkSc6RIDmL675zEkjQd4mZR9ICbBJ9wBE88p2OYB8iqhSBDyfTpm32kTccwk/q9gPM8y0X4y2wsJlnvY3wrnHYrsEr2fpUgoQhkb0jJ5JV1ZtAN8GhnY9ooFyD8Ar7FfmyWqArxInHIDa6XJqQEcTwYXY+qaDEPqw+URkoutFLS/IXrLDXgoQ5CDpqwmSqVmaXw3Q6DvpLAvsA9yjuQOga0A/n4XzNcC+xAljgPg+ege7CbdIp4ds5RUid1ttK5jYY2feWQIQhEbMH/NOkf0yWgC6fZt5Yy1wGNx5vAcgtFl5SksNEE7hMoPDadS6SmbMHp7yufqGnAWpavPwHE5ngwSgxreG6cEnv47PEgQtYQw5jk3NjdpS+gqA0GblQNRTeAymqMQoXyRZA/hW6p2D3OWAdWv2wjpwF/YH0ohABhAYQbLhp7790gaw86aSCmAkAOGciAQg2oKkZ+EBHAVjrQyzSPHs0Tjj4k4jRrWkQfFOAhA4Qbrjgwpr3wowLmzusWVbUwUQXSMnDuBWshvinuCcFz21KiOcKfYm0xvBDXIhrDerhJbIaR9M2Qi8wgrAX1obQGNpDyeXxWDGLOBF7gKIbBbdhnUc6AtnMDThBIKYsX5vWytT4pwy7KaQn6G1hFL2dSIBiJeCXF2zVoBaMiQkP9uxBT24D+AFPh5H0wrgUJaMQUEu3QgPwOWhVHYv5Y7TVi1F3pBdzAE27ynfNhlb4sDAzwAOT3Aa3QcQ2Sw7MSoAtz0LrCVoMndyoFSXXD/193duJNOebARqSQNARq4dAGpG9PKe4ANj9wHUYM6RnOsYjOxkJ9tCkM6XpLx4S36LAmX7Ib6BQ5UWMRzz5ACjBp9V9Pl/vZTLAMKoP12B1/nAWJYP1FagABE8DecZHT/O5Eh2LkkfO9o2Yb+cAzQafFaRilMCNKOg1MOBdDaigM1iw0E9KaQZ6bTNIPh6wffr5SH7MY4yBWfZYuROflg3gNq5AeBGawU49obxTfrjgbTwPJ3VkTCV/2ZivOZmcb3zVgGu5maVjXGDL9KSqAAopL5uKlJxLflAq9D8+SsA8YqeSzHN5cd7w9diV5sx6sT4bu0ZuXwgTtN/XQXAsTRDXsan6in8uSh0+coU1pJmb0hAppbTyzLOThI7Xh8fLMkqLCcsBzAU8qlfVQFQTNRmoietHWCT7gWoiMfYuuloVhhsRqOnZC8bopVn5DPSDbbqcRUApecpK1D/F4CG4niUuNat5Tb9JiUsPSMPsMFWca+yoNqixBKgsNeS6fDZAWC4WpYCXO8F6B4Vx56cRLtfIwlAsH8hEZ2FU16h6pxf3voCoJA71Ku9lTYn4hOWrURs+2tOJMsoNvdr+8CP78rlIQ+wLUtjC1+qZaVXApQd6S3POrZua/7Ynf459fuvb8oXtwHEG0XwoeYDlk0y34tISL0rByX+SrLl0HUFUGIEy9O2bQDtw24wTW2RCazR3QCFfVjYmHftPn0uy0AI7Aur01z5SS0o9dHfGqDkuepctzqlH6ycOTssJ+hwx90A1T+SYXR0Bz0zms2rNQYAqPj1gZ4nTLEM9RyuAIrPsSo2bfXC+5cPQizyJSeiaYsWAz9q8rcCvvSbcpwAwBcVwPIEFqgMHxSEqgEKY7syga0AwyjZ0dSTPHYyoQLY8iMZpvc7/QzUvPSHgBIAeFF5VWn2+0k9ZkuA7gjXXDsk9UpkMVrGtmX7z5svrUQ0nNISxMi24ag0J/d9iw8OAoB7lUkjJ8kgD5RzuAJYr3zK1+qVQ2rzwrbee7/iY+YPAJQGo6AKspsq5rFrLGbEFr4Cd0I1fab77zcKhUq/UwMco0CGc0jq420+/XiPrlGSvIGzCfzWQi5S/dzVBtftCqA5x2UE2c45mMoWbuY02Jx925aUISDRwJorJ+L+spZvYKkaVNkto7FfmodqYPzPXaM1cZg1n+NsTA/L2xUAJx68Pqhe9OEJpQT5/rOkm+7nyot9eQkPpMN2ze/wdtLhvVE1x6sTkUfUr9ohPeN38ttv05mkruyDCCoHjtlwXbzTIOkI7Pp85wfrj9OxMbhmt/EOMHdc9fz7/wtyLe/k6MgfRwAAAABJRU5ErkJggg=="}).addStyleClass("myloginlogo"),      
-				new sap.m.Label({}),
-			    new sap.m.Input({ placeholder: 'Username',
-					              value:"John.smith@domian.com"}),
-                new sap.m.Input({ placeholder: 'Password',
-						                type:"Password"}),
-			    new sap.m.Label({text:"Copyright 2016-2017 Ingram Micro Inc."}).addStyleClass("mycenter")
-			],
-			beginButton: new sap.m.Button({
-				text: 'Login',
-				enabled: true,
-				press: function () {
-					dialog.close();
-				}
-			}),
-			endButton: new sap.m.Button({
-				text: 'Cancel',
-				press: function () {
-					dialog.close();
-				}
-			}),
-			afterClose: function() {
-				dialog.destroy();
-			}
-		});
-        login = 1;
-		dialog.open();
-       } else{ login = 1}
-	
+		
        var carousel = sap.ui.getCore().byId('page1--__carousel1');
        if(carousel){
 		carousel_auto = setTimeout(function() { carousel.next();}, 3500);
