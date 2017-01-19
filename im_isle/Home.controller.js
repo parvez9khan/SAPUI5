@@ -61,13 +61,15 @@ sap.ui.define([
 //		$("#__button0").hide();
 		debugger;
 	//Set Viz frame title runtime	
+	if(sap.ui.getCore().byId("page2--oVizFrame")){
 	sap.ui.getCore().byId("page2--oVizFrame").setVizProperties({
 	title: {
 	alignment:'center',
 	visible: true,
 	text: 'Price & Availability'
 	}
-	});	
+	});
+	}	
 	//Make Carousel autorun images next every 3500 micro seconds	
        var carousel = sap.ui.getCore().byId('page1--__carousel1');
        if(carousel){
