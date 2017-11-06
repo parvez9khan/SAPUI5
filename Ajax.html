@@ -13,7 +13,7 @@ $(document).ready(function() {
         cache: false,
         beforeSend: function (xhr) {
 		debugger;
-            xhr.setRequestHeader("Authorization", "Basic QVBQT0RJTjpBUFBPRElOMTIz");
+            xhr.setRequestHeader("Authorization", "Basic " + btoa("APPODIN" + ":" + "APPODIN123"));
         },
         error: function (data) {
             console.log(data);
