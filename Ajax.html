@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Try jQuery Online</title>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script>
+$(document).ready(function() {
+      $.ajax({
+        url: 'https://imawsservices-usva1-dc1-ext.na.erp.cloud.im:9043/rest/v2/creditCheck?marketplaceCode=US&customAttribute=TRUE_GOLDEN',
+        type: "GET",
+        timeout: 1000000,
+        dataType: "json",
+        cache: false,
+        beforeSend: function (xhr) {
+		debugger;
+            xhr.setRequestHeader("Authorization", "Basic QVBQT0RJTjpBUFBPRElOMTIz");
+        },
+        error: function (data) {
+            console.log(data);
+            debugger;
+        },
+        success: function (data, textStatus, jqXHR) {
+            debugger;
+        }
+    });
+});
+
+</script>
+<style>
+.selected { 
+    color:red; 
+}
+.highlight { 
+    background:yellow; 
+}
+</style>
+</head>
+<body>
+<em title="Bold and Brave">This is first paragraph.</em>
+<p id="myid">This is second paragraph.</p>
+</body>
+</html>
