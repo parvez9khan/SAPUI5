@@ -14,7 +14,7 @@ $(document).ready(function() {
         beforeSend: function (xhr) {
 		debugger;
             	  xhr.setRequestHeader("Content-Type", "application/json");	
-		  xhr.setRequestHeader("Authorization", "Basic " + btoa("APPODIN" + ":" + "APPODIN123"));
+// 		  xhr.setRequestHeader("Authorization", "Basic " + btoa("APPODIN" + ":" + "APPODIN123"));
         },
         error: function (data) {
             console.log(data);
